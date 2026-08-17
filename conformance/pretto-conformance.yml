@@ -1,0 +1,68 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.pretto.fr/mentions-legales/
+note: >-
+  Pretto publishes no machine-readable API contract, so none of the API-side cross-cutting
+  standards below could be asserted from a spec — each is recorded `conforms: null` (not
+  checkable) rather than false, so an absence of evidence is not published as evidence of
+  absence. What Pretto DOES publish is a regulated-entity compliance posture: an ORIAS
+  registration, ACPR supervision, professional liability cover and a B Corp certification.
+  Those are recorded under `compliance_program` and are the basis for the `Compliance`
+  pointer in apis.yml, which points at the published legal page, not at this file.
+standards:
+- id: oauth2
+  conforms: null
+  evidence: no public OpenAPI or auth documentation to read
+- id: openid-connect
+  conforms: null
+  evidence: /.well-known/openid-configuration returns 404 on every Pretto host
+- id: rfc9457-problem-details
+  conforms: null
+  evidence: no public error reference
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on www.pretto.fr and api.pretto.fr
+- id: rfc9727-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404 on every host probed
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document found on www.pretto.fr, api.pretto.fr, partners.pretto.fr or
+    www.prettogalaxie.fr; api.pretto.fr/api-docs exists but returns 401 (HTTP Basic).
+- id: asyncapi
+  conforms: false
+  evidence: no event, streaming or webhook surface published
+- id: graphql
+  conforms: null
+  evidence: >-
+    Pretto's public npm packages and GitHub org show GraphQL is used internally
+    (@pretto/graphql-codegen-loader, a graphiql fork), but no public /graphql endpoint
+    responds — api.pretto.fr/graphql, /api/graphql and /v1/graphql all return 404.
+compliance_program:
+  published: true
+  page: https://www.pretto.fr/mentions-legales/
+  legal_entity: FINSPOT SAS
+  siren: '825077886'
+  registrations:
+  - authority: ORIAS
+    number: '17000916'
+    categories:
+    - Courtier en operations de banque et en services de paiement
+    - Courtier en assurance
+  supervision:
+  - authority: Autorite de Controle Prudentiel et de Resolution (ACPR)
+    address: 4 Place de Budapest, CS 92459, 75436 Paris Cedex 09
+  insurance:
+  - carrier: MARKEL
+    policy: '33100269'
+    kind: professional liability (RC professionnelle)
+  certifications:
+  - name: B Corp
+    url: https://www.pretto.fr/notre-service/certification-b-corp/
+  data_protection:
+  - regime: GDPR / RGPD
+    page: https://www.pretto.fr/privacy/
+  hosting:
+  - provider: OVH
+    location: Roubaix, France

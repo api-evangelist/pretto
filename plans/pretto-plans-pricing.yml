@@ -1,0 +1,47 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.pretto.fr/courtier-credit/courtier-immobilier-comment-ca-marche/prix-courtier/
+note: >-
+  Pretto publishes NO API plans — there is no public developer program, no API key issuance
+  and no metered API tier, so `plan_count: 0` is the honest measurement for the API-plans
+  dimension. Pretto does publish a transparent SERVICE fee schedule for its mortgage
+  brokerage, recorded below under `service_pricing` so the profile is not misread as "this
+  company publishes no pricing at all". Fees are consumer brokerage fees, not API access.
+plan_count: 0
+api_plans: []
+service_pricing:
+  currency: EUR
+  billing: one-off fee per completed mortgage file, invoiced at the notarial deed
+  payment_trigger: >-
+    No payment is requested until the bank begins releasing funds to the notary.
+  tiers:
+  - name: Dossier classique (standard file)
+    fee_fixed: 1590
+    fee_variable_percent: 0.3
+    basis: percentage of the borrowed amount, added to the fixed fee
+    includes: file assembly, bank negotiation, follow-up through to signature
+  - name: Dossier complexe (complex file)
+    fee_fixed: 1990
+    fee_variable_percent: 0.6
+    basis: percentage of the borrowed amount, added to the fixed fee
+    applies_to:
+    - SCI (property holding companies)
+    - non-residents
+    - self-employed professionals
+    - medical professions
+    - construction projects
+    - borrowing above EUR 1,000,000
+  free:
+  - Mortgage simulation and borrowing-capacity tools
+  - Consultation with a Pretto credit expert
+  - Attestation de financement (financing certificate)
+  bank_side_remuneration: >-
+    Pretto states it is additionally remunerated by partner banks at roughly 0.5%-0.8% of the
+    loan amount, capped around EUR 3,000.
+partner_program:
+  name: Pretto Galaxie
+  url: https://www.prettogalaxie.fr/
+  terms_published: >-
+    Marketed as no entry fee, no commitment, no territorial limit and no compensation ceiling
+    for independent brokers joining the network. No rate card or API plan is published; the
+    platform is accessed as a hosted product, not as an API.

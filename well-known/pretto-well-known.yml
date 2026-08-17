@@ -1,0 +1,58 @@
+generated: '2026-08-17'
+method: probed
+source: live HTTPS probes of every Pretto host, 2026-08-17
+note: >-
+  Every /.well-known/ path probed returned 404 on every Pretto host. This file records a
+  measured ABSENCE, not a presence. No WellKnown, SecurityTxt or APICatalog pointer is
+  wired into apis.yml, because the provider serves none of these documents.
+hosts:
+- host: https://www.pretto.fr
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apple-app-site-association
+    status: 404
+- host: https://api.pretto.fr
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+- host: https://partners.pretto.fr
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+- host: https://www.prettogalaxie.fr
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+summary:
+  paths_probed: 18
+  hits: 0
+  security_txt: false
+  agent_card: false
+  api_catalog: false

@@ -1,0 +1,36 @@
+generated: '2026-08-17'
+method: probed
+source: >-
+  Live probes of https://api.pretto.fr and https://www.pretto.fr, plus a search of every
+  public Pretto property for a developer/rate-limit reference, 2026-08-17.
+note: >-
+  Pretto publishes no developer documentation, so no rate limits are documented. The one
+  rate-limit signal observed anywhere on the estate is on the deactivated ReadMe developer
+  hub, which is infrastructure of the docs vendor rather than a Pretto API contract — it is
+  recorded below as evidence only and is deliberately NOT counted as a published limit.
+limit_count: 0
+limits: []
+response_headers_observed:
+- host: developers.pretto.fr
+  headers:
+  - X-RateLimit-Limit
+  - X-RateLimit-Remaining
+  - X-RateLimit-Reset
+  observed_values:
+    X-RateLimit-Limit: '100'
+    X-RateLimit-Remaining: '99'
+  note: >-
+    Emitted by the ReadMe.io / Render edge serving the deactivated developer hub (HTTP 302 to
+    /inactive, then 401). Not a Pretto API rate limit.
+- host: api.pretto.fr
+  headers: []
+  note: >-
+    No RateLimit-*, X-RateLimit-* or Retry-After header observed on any anonymous response;
+    every unauthenticated request returns 404 or 401 with no rate-limit signalling.
+x-evidence:
+- url: https://api.pretto.fr/api-docs
+  status: 401
+  note: 'WWW-Authenticate: Basic realm="" — reference route exists but is credential-gated.'
+- url: https://developers.pretto.fr/
+  status: 302
+  note: redirects to /inactive, which returns 401.

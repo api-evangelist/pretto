@@ -1,0 +1,92 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.npmjs.com/search?q=%40pretto — npm registry metadata endpoints, 2026-08-17
+note: >-
+  Pretto (legal entity FINSPOT SAS, GitHub org github.com/finspot) publishes seven packages
+  under the @pretto npm scope. NONE of them is an API client library: they are front-end
+  building blocks and internal build tooling (an address/places autocomplete widget, an icon
+  set, GraphQL codegen loaders, a React-to-PDF renderer, and shared eslint/prettier configs).
+  Pretto ships no public API, so there is no SDK to wrap one. For that reason NO `SDKs`
+  pointer is wired into apis.yml — only `Packages`. Registries probed with no first-party
+  result: PyPI, RubyGems, crates.io, Packagist, NuGet, Maven Central, pkg.go.dev.
+registries_probed: [npm, pypi, rubygems, crates.io, packagist, nuget, maven-central, go-modules]
+sdk_count: 0
+package_count: 7
+packages:
+- language: javascript
+  registry: npm
+  name: '@pretto/picto'
+  url: https://www.npmjs.com/package/@pretto/picto
+  repository: https://github.com/finspot/picto
+  install: npm install @pretto/picto
+  official: true
+  kind: icon-library
+  version: 4.33.4
+  published: '2026-01-08'
+- language: javascript
+  registry: npm
+  name: '@pretto/places'
+  url: https://www.npmjs.com/package/@pretto/places
+  install: npm install @pretto/places
+  official: true
+  kind: ui-component
+  description: Address / places autocomplete component used across the Pretto front ends.
+  version: 0.46.1
+  published: '2025-11-03'
+- language: javascript
+  registry: npm
+  name: '@pretto/vite-graphql-codegen-loader'
+  url: https://www.npmjs.com/package/@pretto/vite-graphql-codegen-loader
+  install: npm install @pretto/vite-graphql-codegen-loader
+  official: true
+  kind: build-tooling
+  description: Vite plugin for GraphQL code generation.
+  version: 0.9.0
+  published: '2025-10-30'
+- language: javascript
+  registry: npm
+  name: '@pretto/prettier-config-pretto'
+  url: https://www.npmjs.com/package/@pretto/prettier-config-pretto
+  repository: https://github.com/finspot/prettier-config-pretto
+  install: npm install --save-dev @pretto/prettier-config-pretto
+  official: true
+  kind: build-tooling
+  version: 2.3.0
+  published: '2025-07-04'
+- language: javascript
+  registry: npm
+  name: '@pretto/graphql-codegen-loader'
+  url: https://www.npmjs.com/package/@pretto/graphql-codegen-loader
+  repository: https://github.com/finspot/graphql-codegen-loader
+  install: npm install @pretto/graphql-codegen-loader
+  official: true
+  kind: build-tooling
+  version: 1.6.0
+  published: '2025-01-16'
+- language: javascript
+  registry: npm
+  name: '@pretto/intern'
+  url: https://www.npmjs.com/package/@pretto/intern
+  repository: https://github.com/finspot/intern
+  install: npm install @pretto/intern
+  official: true
+  kind: rendering
+  description: A React to PDF framework.
+  version: 0.7.0
+  published: '2023-10-05'
+- language: javascript
+  registry: npm
+  name: '@pretto/eslint-config-pretto'
+  url: https://www.npmjs.com/package/@pretto/eslint-config-pretto
+  repository: https://github.com/finspot/eslint-config-pretto
+  install: npm install --save-dev @pretto/eslint-config-pretto
+  official: true
+  kind: build-tooling
+  version: 2.1.0
+  published: '2023-08-08'
+x-evidence:
+- source: https://registry.npmjs.org/-/v1/search?text=pretto&size=25
+  fetched: '2026-08-17'
+- source: https://api.github.com/orgs/finspot/repos
+  fetched: '2026-08-17'
+  note: 21 public repos, mostly forks, hiring exercises and CI actions — no API spec, no SDK.

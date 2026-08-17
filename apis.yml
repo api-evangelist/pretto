@@ -1,19 +1,34 @@
 aid: pretto
 name: Pretto
-description: 'Pretto is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: fintech-insurtech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Pretto is a French online mortgage brokerage (courtier en credit immobilier) operated
+  by FINSPOT SAS, founded in 2016 and headquartered in Paris. It runs a digital platform that lets
+  borrowers simulate a home loan, compare rates across more than 125 partner banks, assemble a
+  financing file and be accompanied by a human credit expert through to signature, and it publishes
+  a transparent, non-negotiable fee schedule instead of the bank-funded commission model used by
+  most French brokers. Pretto also operates Pretto Galaxie, a B2B network that opens the same
+  technology stack — semi-automated file assembly, an embeddable loan simulator, a client portal,
+  a commission dashboard and a back-office service — to independent brokers, and Pretto Search, a
+  consumer property-search product priced against real borrowing capacity. FINSPOT is registered
+  with ORIAS (17000916) as a banking/payment-services and insurance broker and is supervised by the
+  ACPR. As of this pass Pretto publishes no public developer program: the api.pretto.fr host serves
+  its API reference behind HTTP Basic auth and the developers.pretto.fr ReadMe hub is deactivated.'
 url: https://raw.githubusercontent.com/api-evangelist/pretto/refs/heads/main/apis.yml
+image: https://res.cloudinary.com/pretto-fr/image/upload/c_fill,w_1200,h_630,f_auto,q_auto/website/pretto-og-default
 x-type: company
 x-source: serena-portfolio
-x-tier: stub
-x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-08-17'
 modified: '2026-08-17'
 tags:
 - Company
 - Fintech Insurtech
+- Mortgage
+- Lending
+- Real Estate
+- Brokerage
+- France
+- Consumer Finance
+- Financial Services
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +36,68 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/pretto-domain-security.yml
 - type: Website
   url: https://www.pretto.fr/
+- type: About
+  url: https://www.pretto.fr/notre-service/
+- type: Support
+  url: https://www.pretto.fr/contact/
+- type: HelpCenter
+  url: https://faq.pretto.fr/fr
+- type: Blog
+  url: https://www.pretto.fr/actualites/
+- type: GitHubOrganization
+  url: https://github.com/finspot
+- type: Pricing
+  url: https://www.pretto.fr/courtier-credit/courtier-immobilier-comment-ca-marche/prix-courtier/
+- type: TermsOfService
+  url: https://www.pretto.fr/cgu/
+- type: PrivacyPolicy
+  url: https://www.pretto.fr/privacy/
+- type: LegalNotices
+  url: https://www.pretto.fr/mentions-legales/
+- type: Careers
+  url: https://www.pretto.fr/nous-rejoindre/
+- type: Partners
+  url: https://www.prettogalaxie.fr/
+- type: Packages
+  url: packages/pretto-packages.yml
+- type: LLMsTxt
+  url: llms/pretto-llms.txt
+- type: Plans
+  url: plans/pretto-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/pretto-rate-limits.yml
+- type: Conformance
+  url: conformance/pretto-conformance.yml
+- type: Compliance
+  url: https://www.pretto.fr/mentions-legales/
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Pretto's API reference route exists at https://api.pretto.fr/api-docs but is protected by
+    HTTP Basic auth (401), and the developers.pretto.fr ReadMe hub 302s to /inactive and then
+    401s — while sibling paths on the same API host return 404, so the gate is real and the
+    contract is issued only to Pretto Galaxie broker partners under agreement, never published.
+  evidence:
+  - url: https://api.pretto.fr/api-docs
+    status: 401
+  - url: https://api.pretto.fr/api-docsX
+    status: 404
+  - url: https://developers.pretto.fr/
+    status: 302
+  - url: https://developers.pretto.fr/inactive
+    status: 401
+  - url: https://api.pretto.fr/openapi.json
+    status: 404
+  - url: https://www.pretto.fr/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-17'
