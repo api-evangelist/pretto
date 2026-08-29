@@ -13,6 +13,17 @@ description: 'Pretto is a French online mortgage brokerage (courtier en credit i
   ACPR. As of this pass Pretto publishes no public developer program: the api.pretto.fr host serves
   its API reference behind HTTP Basic auth and the developers.pretto.fr ReadMe hub is deactivated.'
 url: https://raw.githubusercontent.com/api-evangelist/pretto/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://res.cloudinary.com/pretto-fr/image/upload/c_fill,w_1200,h_630,f_auto,q_auto/website/pretto-og-default
 x-type: company
 x-source: serena-portfolio
