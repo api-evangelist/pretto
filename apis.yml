@@ -48,11 +48,11 @@ tags:
 - Fintech Insurtech
 - Mortgage
 - Lending
-- Real-Estate
+- Real Estate
 - Brokerage
 - France
 - Consumer Finance
-- Financial-Services
+- Financial Services
 tags_raw:
 - Company
 - Fintech Insurtech
@@ -63,6 +63,8 @@ tags_raw:
 - France
 - Consumer Finance
 - Financial Services
+- Real-Estate
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
