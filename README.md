@@ -64,6 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pretto is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: fintech-insurtech. This profile is a lead awaiting the enrichment pipeline.
+Pretto is a French online mortgage brokerage (courtier en credit immobilier) operated by FINSPOT SAS, founded in 2016 and headquartered in Paris. It runs a digital platform that lets borrowers simulate a home loan, compare rates across more than 125 partner banks, assemble a financing file and be accompanied by a human credit expert through to signature, and it publishes a transparent, non-negotiable fee schedule instead of the bank-funded commission model used by most French brokers. Pretto also operates Pretto Galaxie, a B2B network that opens the same technology stack — semi-automated file assembly, an embeddable loan simulator, a client portal, a commission dashboard and a back-office service — to independent brokers, and Pretto Search, a consumer property-search product priced against real borrowing capacity. FINSPOT is registered with ORIAS (17000916) as a banking/payment-services and insurance broker and is supervised by the ACPR. As of this pass Pretto publishes no public developer program: the api.pretto.fr host serves its API reference behind HTTP Basic auth and the developers.pretto.fr ReadMe hub is deactivated.
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.pretto.fr/
+**Areas:** Company · Fintech Insurtech · Mortgage · Lending · Real Estate · Brokerage · France · Consumer Finance · Financial Services
+
+## Pretto on APIs.io
+
+Everything profiled for Pretto is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pretto/](https://apis.io/providers/pretto/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/pretto/](https://apis.io/servers/pretto/pretto/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pretto Domain Security](https://apis.io/security/pretto/pretto-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Pretto Plans Pricing](https://apis.io/plans/pretto/pretto-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Pretto Rate Limits](https://apis.io/rate-limits/pretto/pretto-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.pretto.fr/)
+- [Pricing](https://www.pretto.fr/courtier-credit/courtier-immobilier-comment-ca-marche/prix-courtier/)
+- [Support](https://www.pretto.fr/contact/)
+- [Blog](https://www.pretto.fr/actualites/)
+- [Compliance](https://www.pretto.fr/mentions-legales/)
+- [Terms of service](https://www.pretto.fr/cgu/)
+- [Privacy policy](https://www.pretto.fr/privacy/)
+- [GitHub](https://github.com/finspot)
+
+## API Evangelist rating
+
+**Kin Score 16.2** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 39.5 |
+
+**Agent readiness 11.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 21.1** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pretto/](https://apis.io/providers/pretto/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pretto: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pretto/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
